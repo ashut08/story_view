@@ -824,11 +824,11 @@ class StoryProgressIndicator extends StatelessWidget {
         this.indicatorHeight,
       ),
       foregroundPainter: IndicatorOval(
-        this.backgroundIndicatorColor,
+        this.indicatorColor,
         this.value,
       ),
       painter: IndicatorOval(
-        this.indicatorColor,
+        this.backgroundIndicatorColor,
         1.0,
       ),
     );
