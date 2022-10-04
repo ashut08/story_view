@@ -647,6 +647,7 @@ class StoryViewState extends State<StoryView> with TickerProviderStateMixin {
                       ? IndicatorHeight.small
                       : IndicatorHeight.large,
                   indicatorColor: widget.indicatorColor,
+                  backgroundIndicatorColor: widget.indicatorBackgroundColor,
                 ),
               ),
             ),
@@ -791,6 +792,7 @@ class PageBarState extends State<PageBar> {
               indicatorHeight:
               widget.indicatorHeight == IndicatorHeight.large ? 5 : 3,
               indicatorColor: widget.indicatorColor,
+              backgroundIndicatorColor: widget.backgroundIndicatorColor,
             ),
           ),
         );
