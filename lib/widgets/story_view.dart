@@ -407,6 +407,8 @@ class StoryView extends StatefulWidget {
 
   // Indicator Color
   final Color indicatorColor;
+  //indicator background color
+  final Color indicatorBackgroundColor;
 
   StoryView({
     required this.storyItems,
@@ -418,6 +420,7 @@ class StoryView extends StatefulWidget {
     this.inline = false,
     this.onVerticalSwipeComplete,
     this.indicatorColor = Colors.white,
+    this.indicatorBackgroundColor=Colors.grey
   });
 
   @override
@@ -732,12 +735,14 @@ class PageBar extends StatefulWidget {
   final Animation<double>? animation;
   final IndicatorHeight indicatorHeight;
   final Color indicatorColor;
+  final Color backgroundIndicatorColor;
 
   PageBar(
       this.pages,
       this.animation, {
         this.indicatorHeight = IndicatorHeight.large,
         this.indicatorColor = Colors.white,
+        this.backgroundIndicatorColor=Colors.grey,
         Key? key,
       }) : super(key: key);
 
@@ -801,11 +806,13 @@ class StoryProgressIndicator extends StatelessWidget {
   final double value;
   final double indicatorHeight;
   final Color indicatorColor;
+  final Color backgroundIndicatorColor;
 
   StoryProgressIndicator(
       this.value, {
         this.indicatorHeight = 5,
         this.indicatorColor = Colors.white,
+        this.backgroundIndicatorColor=Colors.grey
       });
 
   @override
@@ -815,11 +822,11 @@ class StoryProgressIndicator extends StatelessWidget {
         this.indicatorHeight,
       ),
       foregroundPainter: IndicatorOval(
-        this.indicatorColor.withOpacity(0.8),
+        this.backgroundIndicatorColor,
         this.value,
       ),
       painter: IndicatorOval(
-        this.indicatorColor.withOpacity(0.4),
+        this.indicatorColor,
         1.0,
       ),
     );
